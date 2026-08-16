@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackedRoomba - Новости проекта</title>
+    <style>
+        body {
+            background-color: #ebebeb;
+            color: #333333;
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            line-height: 18px;
+            margin: 0;
+            padding: 0;
+        }
+        #page {
+            background-color: #ffffff;
+            border: 1px solid #959595;
+            margin: 20px auto;
+            max-width: 780px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        #header {
+            background-color: #ffffff;
+            border-bottom: 3px double #959595;
+            padding: 20px;
+        }
+        #header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin: 0 0 5px 0;
+        }
+        #header h1 a {
+            color: #d54e21;
+            text-decoration: none;
+        }
+        .description {
+            color: #777777;
+            font-style: italic;
+            margin: 0;
+        }
+        #nav {
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #959595;
+            padding: 8px 20px;
+        }
+        #nav a {
+            color: #333333;
+            font-weight: bold;
+            margin-right: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+        #nav a:hover {
+            color: #d54e21;
+        }
+        #nav a.active {
+            color: #d54e21;
+        }
+        #content-wrapper {
+            display: flex;
+            padding: 20px;
+        }
+        #main-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        #sidebar {
+            width: 180px;
+            border-left: 1px dashed #d54e21;
+            padding-left: 20px;
+        }
+        .post {
+            margin-bottom: 35px;
+            border-bottom: 1px dotted #e2e2e2;
+            padding-bottom: 20px;
+        }
+        .post:last-child {
+            border-bottom: none;
+        }
+        .post h2 {
+            font-size: 18px;
+            margin: 0 0 5px 0;
+        }
+        .post h2 a {
+            color: #d54e21;
+            text-decoration: none;
+        }
+        .post small {
+            color: #777777;
+        }
+        .entry {
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .widget {
+            margin-bottom: 20px;
+        }
+        .widget h3 {
+            color: #333333;
+            font-size: 13px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid #959595;
+            padding-bottom: 3px;
+        }
+        .widget ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .widget ul li {
+            padding: 4px 0;
+        }
+        .widget ul li a {
+            color: #d54e21;
+            text-decoration: none;
+        }
+        #footer {
+            background-color: #f4f4f4;
+            border-top: 1px solid #959595;
+            clear: both;
+            padding: 15px 20px;
+            text-align: center;
+            color: #777777;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="page">
+    <div id="header">
+        <h1><a href="index.html">HackedRoomba</a></h1>
+        <p class="description">Взлом, модификация и кастомный софт для роботов-пылесосов Roomba</p>
+    </div>
+
+    <div id="nav">
+        <a href="index.html">Главная</a>
+        <a href="news.html" class="active">Новости</a>
+        <a href="RoombaMusic.html">Приложение RoombaMusic</a>
+    </div>
+
+    <div id="content-wrapper">
+        <div id="main-content">
+            
+            <!-- ЛЕНТА НОВОСТЕЙ -->
+            <div class="post">
+                <h2><a href="#">Запуск бета-теста RoombaMusic</a></h2>
+                <small>Опубликовано: 16 августа 2026</small>
+                <div class="entry">
+                    <p>Сегодня официально стартовал открытый бета-тест нашего музыкального приложения. Мы исправили критическую ошибку, из-за которой на старых моделях Roomba 500-й серии зависали длинные MIDI-треки. Скачать обновленный архив можно на официальной вкладке проекта.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2><a href="#">Документация по Roomba Open Interface (ROI)</a></h2>
+                <small>Опубликовано: 10 августа 2026</small>
+                <div class="entry">
+                    <p>Мы перевели и выложили базовую распиновку 7-контактного разъема Mini-DIN, который находится под верхней панелью вашей Roomba. Это руководство поможет новичкам правильно подключить Bluetooth-модули или Arduino, чтобы не сжечь материнскую плату робота.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2><a href="#">Открытие сайта HackedRoomba!</a></h2>
+                <small>Опубликовано: 16 августа 2026</small>
+                <div class="entry">
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="sidebar">
+            <div class="widget">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная страница</a></li>
+                    <li><a href="news.html">Новости проекта</a></li>
+                    <li><a href="RoombaMusic.html">RoombaMusic App</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        &copy; 2026 HackedRoomba. Работает на GitHub Pages.
+    </div>
+</div>
+
+</body>
+</html>
