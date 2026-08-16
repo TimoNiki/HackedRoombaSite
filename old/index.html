@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackedRoomba - Главная страница</title>
+    <style>
+        body {
+            background-color: #ebebeb;
+            color: #333333;
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            line-height: 18px;
+            margin: 0;
+            padding: 0;
+        }
+        /* Тот самый центральный блок с "белыми боками" */
+        #page {
+            background-color: #ffffff;
+            border: 1px solid #959595;
+            margin: 20px auto;
+            max-width: 780px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        #header {
+            background-color: #ffffff;
+            border-bottom: 3px double #959595;
+            padding: 20px;
+        }
+        #header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            margin: 0 0 5px 0;
+        }
+        #header h1 a {
+            color: #d54e21;
+            text-decoration: none;
+        }
+        .description {
+            color: #777777;
+            font-style: italic;
+            margin: 0;
+        }
+        /* Меню навигации */
+        #nav {
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #959595;
+            padding: 8px 20px;
+        }
+        #nav a {
+            color: #333333;
+            font-weight: bold;
+            margin-right: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+        #nav a:hover, #nav a.active {
+            color: #d54e21;
+        }
+        /* Двухколоночный контент */
+        #content-wrapper {
+            display: flex;
+            padding: 20px;
+        }
+        #main-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        #sidebar {
+            width: 180px;
+            border-left: 1px dashed #d54e21;
+            padding-left: 20px;
+        }
+        /* Стили постов */
+        .post {
+            margin-bottom: 30px;
+        }
+        .post h2 {
+            font-size: 20px;
+            margin: 0 0 5px 0;
+        }
+        .post h2 a {
+            color: #d54e21;
+            text-decoration: none;
+        }
+        .post small {
+            color: #777777;
+        }
+        .entry {
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        /* Сайдбар */
+        .widget {
+            margin-bottom: 20px;
+        }
+        .widget h3 {
+            color: #333333;
+            font-size: 13px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid #959595;
+            padding-bottom: 3px;
+        }
+        .widget ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .widget ul li {
+            padding: 4px 0;
+        }
+        .widget ul li a {
+            color: #d54e21;
+            text-decoration: none;
+        }
+        .widget ul li a:hover {
+            text-decoration: underline;
+        }
+        #footer {
+            background-color: #f4f4f4;
+            border-top: 1px solid #959595;
+            clear: both;
+            padding: 15px 20px;
+            text-align: center;
+            color: #777777;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="page">
+    <div id="header">
+        <h1><a href="index.html">HackedRoomba</a></h1>
+        <p class="description">Взлом, модификация и кастомный софт для роботов-пылесосов Roomba</p>
+    </div>
+
+    <div id="nav">
+        <a href="index.html" class="active">Главная</a>
+        <a href="news.html">Новости</a>
+        <a href="RoombaMusic.html">Приложение RoombaMusic</a>
+    </div>
+
+    <div id="content-wrapper">
+        <div id="main-content">
+            <div class="post">
+                <h2><a href="#">Добро пожаловать на HackedRoomba!</a></h2>
+                <small>Опубликовано: 16 августа 2026</small>
+                <div class="entry">
+                    <p>Этот сайт посвящен реверс-инжинирингу и модификации умных роботов-пылесосов Roomba. Здесь вы найдете прошивки, схемы подключения и полезный софт для расширения стандартных возможностей вашего робота.</p>
+                    <p>Мы верим, что любая вещь, которую вы купили, должна принадлежать вам полностью — включая возможность запускать на ней свой собственный программный код!</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2><a href="RoombaMusic.html">Новый релиз: RoombaMusic v1.0</a></h2>
+                <small>Опубликовано: 15 августа 2026</small>
+                <div class="entry">
+                    <p>Рады представить наше новое приложение <strong>RoombaMusic</strong>. Теперь ваш робот-пылесос может не просто убираться, но и воспроизводить полноценные 8-битные мелодии через встроенный пьезодинамик. Программа поддерживает конвертацию MIDI-файлов.</p>
+                    <p><a href="RoombaMusic.html">Перейти на страницу приложения и скачать →</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <div class="widget">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная страница</a></li>
+                    <li><a href="news.html">Новости проекта</a></li>
+                    <li><a href="RoombaMusic.html">RoombaMusic App</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h3>Ссылки</h3>
+                <ul>
+                    <li><a href="https://github.com/TimoNiki" target="_blank">Мой GitHub</a></li
+                    <li><a href="hackingroomba.com" target="_blank">сайт проекта от Tod E. kurt.</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        &copy; 2026 TimoNiki. Работает на GitHub Pages.
+    </div>
+</div>
+
+</body>
+</html>
