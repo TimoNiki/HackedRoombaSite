@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackedRoomba — Новости</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+            color: #33;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .wrapper {
+            max-width: 780px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-left: 1px solid #e0e0e0;
+            border-right: 1px solid #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            padding: 40px 20px 20px 20px;
+            border-bottom: 3px double #e0e0e0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: normal;
+        }
+        header h1 a {
+            color: #d54e21;
+            text-decoration: none;
+        }
+        header .description {
+            font-style: italic;
+            color: #777;
+            margin-top: 5px;
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            border-right: 1px solid #eee;
+        }
+        .sidebar {
+            width: 220px;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        /* Стиль для ленты новостей */
+        .post {
+            margin-bottom: 35px;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 20px;
+        }
+        .post:last-child {
+            border-bottom: none; /* У последней новости нет линии снизу */
+        }
+        .post h2 {
+            font-size: 18px;
+            color: #222;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .post h2 a {
+            color: #222;
+            text-decoration: none;
+        }
+        .post h2 a:hover {
+            color: #d54e21;
+        }
+        .post .date {
+            font-size: 11px;
+            color: #777;
+            margin-bottom: 12px;
+        }
+        .widget {
+            margin-bottom: 25px;
+        }
+        .widget h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 3px;
+        }
+        .widget ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .widget ul li {
+            padding: 4px 0;
+            border-bottom: 1px dashed #f0f0f0;
+        }
+        .widget ul li a {
+            color: #555;
+            text-decoration: none;
+        }
+        .widget ul li a:hover {
+            color: #d54e21;
+        }
+        footer {
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #e0e0e0;
+            font-size: 11px;
+            color: #777;
+            text-align: center;
+        }
+        a {
+            color: #d54e21;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <h1><a href="index.html">HackedRoomba</a></h1>
+        <div class="description">Взлом, модификация и кастомный софт для вашего робота-пылесоса</div>
+    </header>
+
+    <div class="main-container">
+        <main class="content">
+            
+            <!-- НОВОСТЬ 1 -->
+            <article class="post">
+                <h2><a href="#">Опубликовано обновление документации по кабелям</a></h2>
+                <div class="date">Опубликовано: 16 августа 2026</div>
+                <p>Добавлена подробная информация в раздел чертежей. Разобрали схемы согласования уровней 5V логики Arduino и 3.3V логики порта Roomba. Это поможет избежать случайного выгорания RX/TX пинов микроконтроллера при отправке сигналов.</p>
+            </article>
+
+            <!-- НОВОСТЬ 2 -->
+            <article class="post">
+                <h2><a href="RoombaMusic.html">Релиз RoombaMusic состоялся!</a></h2>
+                <div class="date">Опубликовано: 15 августа 2026</div>
+                <p>Первая публичная сборка нашего приложения для конвертации и отправки MIDI-команд успешно протестирована на роботах серии Roomba 600. Программа стабильно держит подключение и корректно обрабатывает паузы между нотами.</p>
+                <p><a href="RoombaMusic.html">Перейти на страницу RoombaMusic для скачивания утилиты &rarr;</a></p>
+            </article>
+
+            <!-- НОВОСТЬ 3 -->
+            <article class="post">
+                <h2><a href="#">Запуск блога HackedRoomba</a></h2>
+                <div class="date">Опубликовано: 12 августа 2026</div>
+                <p>Мы официально запустили наш скромный проект на GitHub Pages! На этой площадке будут собираться наработки по кастомизации программного обеспечения умных пылесосов, инструкции по перепрошивке и интересные хакерские эксперименты.</p>
+            </article>
+
+        </main>
+
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная страница</a></li>
+                    <li><a href="RoombaMusic.html">Проект RoombaMusic</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h3>Разделы сайта</h3>
+                <ul>
+                    <li><a href="news.html" style="color: #d54e21; font-weight: bold;">Новости проекта</a></li>
+                    <li><a href="https://github.com/TimoNiki/">TimoNiki Github.</a></li>
+                    <li><a href="#">Схемы и чертежи</a></li>
+                    <li><a href="#">Полезные ресурсы</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h3>Полезные ссылки</h3>
+                <ul>
+                    <li><a href="https://github.com/TimoNiki/" target="_blank">Я на GitHub</a></li>
+                    <li><a href="NoPage." target="_blank">iRobot ROI Spec</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TimoNiki. Работает на GitHub Pages. Дизайн вдохновлен fSpring.</p>
+        <p>TimoNiki NotALavaHackDays!.</p>
+    </footer>
+</div>
+
+</body>
+</html>
