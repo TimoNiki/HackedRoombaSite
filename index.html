@@ -18,6 +18,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HackedRoomba — Главная</title>
     <style>
+        /* Стили для всплывающего окна */
+        .notification-banner {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            z-index: 9999; /* Чтобы окно было поверх остальных элементов */
+        }
+
+        /* Стили для кнопки «Принять» */
+        .notification-banner button {
+            display: block;
+            margin-top: 12px;
+            margin-left: auto; /* Сдвигает кнопку вправо */
+            background-color: #fc0; /* Желтый цвет в стиле Яндекс */
+            color: #000000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        /* Эффект при наведении на кнопку */
+        .notification-banner button:hover {
+            background-color: #f5c000;
+        }
         * {
             box-sizing: border-box;
         }
@@ -155,7 +191,23 @@
     </style>
 </head>
 <body>
+<!-- Разметка окна -->
+    <div id="welcomeBanner" class="notification-banner">
+        Находясь на сайте, вы принимаете условия использования ваших данных YandexMetrika.
+        <button id="closeBannerBtn">Принять</button>
+    </div>
 
+    <!-- Скрипт для скрытия -->
+    <script>
+        const banner = document.getElementById('welcomeBanner');
+        const button = document.getElementById('closeBannerBtn');
+
+        // Удаляем или скрываем окно при клике на кнопку
+        button.addEventListener('click', function() {
+            banner.style.display = 'none';
+        });
+    </script>
+    
 <div class="wrapper">
     <header>
         <h1><a href="index.html">HackedRoomba</a></h1>
