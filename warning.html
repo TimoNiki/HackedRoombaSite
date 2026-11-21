@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переход на внешний сайт</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            max-width: 480px;
+            width: 90%;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        .site-name {
+            font-weight: bold;
+            word-break: break-all;
+        }
+        .btn-gray {
+            display: inline-block;
+            background-color: #808080;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .btn-gray:hover {
+            background-color: #666666;
+        }
+        .btn-disabled {
+            background-color: #cccccc;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <p id="message">Загрузка ссылки.</p>
+    <a id="proceed-btn" href="#" class="btn-gray btn-disabled" rel="noopener noreferrer">Все равно перейти</a>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const targetUrl = params.get('url');
+
+    const messageEl = document.getElementById('message');
+    const btnEl = document.getElementById('proceed-btn');
+
+    if (targetUrl) {
+        try {
+// проверка поддерживаемого протокола
+            const parsedUrl = new URL(targetUrl);
+            if (parsedUrl.protocol === 'http:' || parsedUrl.protocol === 'https:') {
+                messageEl.innerHTML = '';
+                messageEl.append('Вы покидаете сайт HackedRoombaSite. Сайт ');
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'site-name';
+                siteSpan.textContent = parsedUrl.hostname; // отображение ТОЛЬКО домена
+                
+                messageEl.append(siteSpan, ' не является частью HackedRoombaSite.');
+
+                //Кнопка
+                btnEl.href = parsedUrl.href;
+                btnEl.classList.remove('btn-disabled');
+            } else {
+                messageEl.textContent = 'Сайт не поддерживает http и https';
+            }
+        } catch (e) {
+            messageEl.textContent = 'Некорректная ссылка.';
+        }
+    } else {
+        messageEl.textContent = 'нет ссылки для перехода';
+    }
+</script>
+
+</body>
+</html>
